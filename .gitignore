@@ -10,7 +10,7 @@ __pycache__
 .vscode
 */.vscode/*
 
-/src/config/server/renat2.yaml
-/src/run_server2.sh
+src/config/server/renat2.yaml
+src/run_server2.sh
 
 *.pyc
