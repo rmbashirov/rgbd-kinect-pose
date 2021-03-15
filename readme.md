@@ -18,14 +18,14 @@ Combined system runs at 30 fps on a 2080ti GPU and 8 core @ 4GHz CPU.
 
 - Download [our](https://drive.google.com/file/d/1Y6HzwJS9N9qWTNNYQdtNqf1FZKoZF-tg/view?usp=sharing) data archive `smplx_kinect_demo_data.tar.gz`
 - Unzip: `mkdir /your/unpacked/dir`,  `tar -zxf smplx_kinect_demo_data.tar.gz -C /your/unpacked/dir`
-- Download models for hand, see link in "Download models from here" line in our [fork](./extern/minimal_hand), put to `/your/unpacked/dir/minimal_hand/model`    
+- Download models for hand, see link in "Download models from here" line in our [fork](https://github.com/rmbashirov/minimal-hand), put to `/your/unpacked/dir/minimal_hand/model`    
 - To download SMPL-X parametric body model go to [this](https://smpl-x.is.tue.mpg.de/) project website, register, go to the downloads section, download SMPL-X v1.1 model, put to `/your/unpacked/dir/pykinect/body_models/smplx`
 - `/your/unpacked/dir` should look like [this](./readme/data_structure.txt)
 
 ### Build & Run
 
 - Install `docker` and `nvidia-docker`, set `nvidia` your default runtime for docker, your nvidia driver should support cuda 10.2, we do not support Windows or Mac.
-- Build docker image: run [these](./docker/readme.md) 2 cmds
+- Build docker image: [run](./docker) 2 cmds
 - Attach your Azure Kinect camera
 - Run demo: in `src` dir run `./run_server.sh`, the latter will run docker image and will use [this](./src/config/server/renat.yaml) config (in config you also need to set `data_dirpath` variable to `/your/unpacked/dir`) where shape of the person is loaded from an external file: in our work we did not focus on person's shape estimation
 
