@@ -1,0 +1,55 @@
+# @package _global_
+data:
+    train:
+        n_iters_per_epoch: 2000
+
+        dataset:
+            cls: face_expression.dataset.VoxCeleb2MediapipeDataset
+            args:
+                image_root: "/Vol1/dbstore/datasets/e.zakharov/youtube_scrapping/voxceleb2/imgs/train"
+            
+                h5_path: "/Vol1/dbstore/datasets/k.iskakov/face_expression/voxceleb2_meta/VoxCeleb2FaceDataset.train.h5"
+                scheme_path: "/Vol1/dbstore/datasets/k.iskakov/face_expression/voxceleb2_meta/VoxCeleb2FaceDataset_scheme_filtered.train.pkl"
+
+                return_keypoints_3d: ${model.predictor.args.use_keypoints_3d}
+            
+                return_images: True
+                bbox_scale: 2.0
+                image_shape: [256, 256]
+
+                sample_range: null
+            
+        dataloader:
+            args:
+                batch_size: 128
+
+                shuffle: True
+                drop_last: True
+                num_workers: 8
+
+    val:
+        n_iters_per_epoch: -1
+
+        dataset:
+            cls: face_expression.dataset.VoxCeleb2MediapipeDataset
+            args:
+                image_root: "/Vol1/dbstore/datasets/e.zakharov/youtube_scrapping/voxceleb2/imgs/test"
+            
+                h5_path: "/Vol1/dbstore/datasets/k.iskakov/face_expression/voxceleb2_meta/VoxCeleb2FaceDataset.test.h5"
+                scheme_path: "/Vol1/dbstore/datasets/k.iskakov/face_expression/voxceleb2_meta/VoxCeleb2FaceDataset_scheme_filtered.test.pkl"
+
+                return_keypoints_3d: ${model.predictor.args.use_keypoints_3d}
+
+                return_images: True
+                bbox_scale: 2.0
+                image_shape: [256, 256]
+
+                sample_range: null
+        
+        dataloader:
+            args:
+                batch_size: 256
+
+                shuffle: False
+                drop_last: False
+                num_workers: 8

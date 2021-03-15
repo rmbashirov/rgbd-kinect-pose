@@ -1,0 +1,6 @@
+[submodule "extern/azure-kinect-samples"]
+	path = extern/azure-kinect-samples
+	url = https://github.sec.samsung.net/a-vakhitov/azure-kinect-samples.git
+[submodule "extern/patched_smplx"]
+	path = extern/patched_smplx
+	url = https://github.sec.samsung.net/r-bashirov/patched_smplx.git

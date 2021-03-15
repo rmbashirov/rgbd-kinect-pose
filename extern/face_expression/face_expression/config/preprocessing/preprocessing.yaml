@@ -1,0 +1,3 @@
+# @package _global_
+preprocessing:
+    keypoints_2d_normalization: 'image_shape'  # 'area', 'no' <<< NOT USED

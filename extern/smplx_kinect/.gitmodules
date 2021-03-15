@@ -1,0 +1,3 @@
+[submodule "extern/smplx_optimization"]
+	path = extern/smplx_optimization
+	url = https://github.sec.samsung.net/r-bashirov/smplx_optimization.git

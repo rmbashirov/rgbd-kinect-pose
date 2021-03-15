@@ -1,0 +1,32 @@
+face-alignment==1.0.0
+h5py==2.10.0
+hydra-core==1.0.0rc2
+ipykernel==5.2.0
+jupyter==1.0.0
+matplotlib==3.2.1
+munch==2.5.0
+nbconvert==5.6.1
+numpy==1.18.2
+opencv-python==4.2.0.32
+pandas==1.0.3
+Pillow==7.0.0
+plotly==4.9.0
+pyrender==0.1.39
+scikit-image==0.16.2
+scikit-learn==0.22.2.post1
+scipy==1.4.1
+tensorflow==1.15
+torch==1.4.0
+torchvision==0.5.0
+tqdm==4.46.0
+trimesh==3.6.16
+wandb==0.9.7
+kornia==0.3.0
+git+https://github.com/nghorbani/configer
+git+https://github.com/nghorbani/human_body_prior
+
+# pip install torch-scatter==latest+cu101 -f https://pytorch-geometric.com/whl/torch-1.4.0.html
+# pip install torch-sparse==latest+cu101 -f https://pytorch-geometric.com/whl/torch-1.4.0.html
+# pip install torch-cluster==latest+cu101 -f https://pytorch-geometric.com/whl/torch-1.4.0.html
+# pip install torch-spline-conv==latest+cu101 -f https://pytorch-geometric.com/whl/torch-1.4.0.html
+# torch-geometric

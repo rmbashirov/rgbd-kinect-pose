@@ -1,0 +1,11 @@
+azure_unpacked_dp: "/storage/wacv_publish/test_capture/offline_processor2"
+converted_fit_dp: "/storage/wacv_publish/test_capture/avakhitov_fits_converted"
+body_models_dp: "/storage/wacv_publish/demo_data/pykinect/body_models"
+output_dp: "/storage/wacv_publish/metrics"
+fast: True
+seqs:
+  - 04_simple
+  - 05_simple
+sns:
+  - 000667292912
+  - 000062692912

@@ -1,0 +1,40 @@
+/your/unpacked/dir
+├── face_expression
+│   └── 04
+│       ├── checkpoint_000044.pth
+│       ├── config.yaml
+│       └── name.txt
+├── minimal_hand
+│   └── model
+│       ├── detnet
+│       │   ├── detnet.ckpt.data-00000-of-00001
+│       │   ├── detnet.ckpt.index
+│       │   └── detnet.ckpt.meta
+│       ├── hand_mesh
+│       │   └── hand_mesh_model.pkl
+│       └── iknet
+│           ├── iknet.ckpt.data-00000-of-00001
+│           ├── iknet.ckpt.index
+│           └── iknet.ckpt.meta
+├── pykinect
+│   ├── body_models
+│   │   └── smplx
+│   │       ├── SMPLX_FEMALE.npz
+│   │       ├── SMPLX_MALE.npz
+│   │       └── version.txt
+│   ├── kintree_kinect
+│   └── rob75_val
+│       ├── info.npy
+│       ├── J.npy
+│       ├── s2k_f.npy
+│       ├── s2k_m.npy
+│       └── weights.npy
+├── shapefit
+│   └── renat
+│       └── betas.npy
+└── smplx_kinect
+    └── 04
+        ├── config.yaml
+        ├── models
+        │   └── net_110000
+        └── train_sample_azure.pickle

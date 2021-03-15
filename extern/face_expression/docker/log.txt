@@ -1,0 +1,175 @@
+Using default tag: latest
+latest: Pulling from ubuntu16.04-cuda10.1-cudnn7-devel-gl-py3.6-torch1.4-fixuid
+976a760c94fc: Already exists
+c58992f3c37b: Already exists
+0ca0e5e7f12e: Already exists
+f2a274cc00ca: Already exists
+708a53113e13: Already exists
+6295ebf8c067: Pulling fs layer
+378a3c4b6a48: Pulling fs layer
+39653001dda5: Pulling fs layer
+1b7b24954ce9: Pulling fs layer
+cde12d6e6d0c: Pulling fs layer
+f9443eb23477: Pulling fs layer
+5e072bee3770: Pulling fs layer
+2079e9b75e82: Pulling fs layer
+dc290c03a08b: Pulling fs layer
+19ec1e4b0faa: Pulling fs layer
+7575467a4504: Pulling fs layer
+0b6f3b738ece: Pulling fs layer
+5e072bee3770: Waiting
+1b7b24954ce9: Waiting
+bcbba2fb1faf: Pulling fs layer
+2079e9b75e82: Waiting
+cde12d6e6d0c: Waiting
+d26dd39aebd1: Pulling fs layer
+bfd697794755: Pulling fs layer
+19ec1e4b0faa: Waiting
+7575467a4504: Waiting
+c73d39423a46: Pulling fs layer
+0b6f3b738ece: Waiting
+2865df1e2f4e: Pulling fs layer
+bcbba2fb1faf: Waiting
+e4dc59f1a76f: Pulling fs layer
+f9443eb23477: Waiting
+3206340d6393: Pulling fs layer
+bfd697794755: Waiting
+d26dd39aebd1: Waiting
+c73d39423a46: Waiting
+198190350e2d: Pulling fs layer
+e4dc59f1a76f: Waiting
+4ef6e8575efc: Pulling fs layer
+3206340d6393: Waiting
+cc56319f86c3: Pulling fs layer
+4be8c185f1b8: Pulling fs layer
+10aef54e5f26: Pulling fs layer
+cb6294f96400: Pulling fs layer
+10aef54e5f26: Waiting
+9bfd42660423: Pulling fs layer
+4be8c185f1b8: Waiting
+4ef6e8575efc: Waiting
+cc56319f86c3: Waiting
+c17ebcd02feb: Pulling fs layer
+9bfd42660423: Waiting
+8005f0d36d37: Pulling fs layer
+c17ebcd02feb: Waiting
+9976fb94b77f: Pulling fs layer
+ce06ac3b0aaa: Pulling fs layer
+c1615e33428c: Pulling fs layer
+9976fb94b77f: Waiting
+4a36abed6d2c: Pulling fs layer
+8005f0d36d37: Waiting
+81f4114b2783: Pulling fs layer
+c1615e33428c: Waiting
+03473fe4df18: Pulling fs layer
+34aa56be3da2: Pulling fs layer
+5a76c66c06d3: Pulling fs layer
+03473fe4df18: Waiting
+81f4114b2783: Waiting
+b5c95ec7daeb: Pulling fs layer
+34aa56be3da2: Waiting
+b5c95ec7daeb: Waiting
+378a3c4b6a48: Download complete
+6295ebf8c067: Download complete
+6295ebf8c067: Pull complete
+378a3c4b6a48: Pull complete
+cde12d6e6d0c: Verifying Checksum
+cde12d6e6d0c: Download complete
+f9443eb23477: Verifying Checksum
+f9443eb23477: Download complete
+5e072bee3770: Verifying Checksum
+5e072bee3770: Download complete
+2079e9b75e82: Verifying Checksum
+2079e9b75e82: Download complete
+dc290c03a08b: Verifying Checksum
+dc290c03a08b: Download complete
+19ec1e4b0faa: Download complete
+7575467a4504: Verifying Checksum
+7575467a4504: Download complete
+0b6f3b738ece: Verifying Checksum
+0b6f3b738ece: Download complete
+bcbba2fb1faf: Download complete
+d26dd39aebd1: Verifying Checksum
+d26dd39aebd1: Download complete
+bfd697794755: Verifying Checksum
+bfd697794755: Download complete
+39653001dda5: Verifying Checksum
+39653001dda5: Download complete
+1b7b24954ce9: Verifying Checksum
+1b7b24954ce9: Download complete
+c73d39423a46: Verifying Checksum
+c73d39423a46: Download complete
+e4dc59f1a76f: Verifying Checksum
+e4dc59f1a76f: Download complete
+198190350e2d: Verifying Checksum
+198190350e2d: Download complete
+3206340d6393: Verifying Checksum
+3206340d6393: Download complete
+39653001dda5: Pull complete
+1b7b24954ce9: Pull complete
+cde12d6e6d0c: Pull complete
+f9443eb23477: Pull complete
+5e072bee3770: Pull complete
+2079e9b75e82: Pull complete
+dc290c03a08b: Pull complete
+19ec1e4b0faa: Pull complete
+7575467a4504: Pull complete
+0b6f3b738ece: Pull complete
+bcbba2fb1faf: Pull complete
+4ef6e8575efc: Download complete
+d26dd39aebd1: Pull complete
+bfd697794755: Pull complete
+c73d39423a46: Pull complete
+4be8c185f1b8: Verifying Checksum
+4be8c185f1b8: Download complete
+10aef54e5f26: Verifying Checksum
+10aef54e5f26: Download complete
+2865df1e2f4e: Verifying Checksum
+2865df1e2f4e: Download complete
+9bfd42660423: Download complete
+c17ebcd02feb: Download complete
+8005f0d36d37: Verifying Checksum
+8005f0d36d37: Download complete
+cb6294f96400: Verifying Checksum
+cb6294f96400: Download complete
+ce06ac3b0aaa: Download complete
+c1615e33428c: Download complete
+4a36abed6d2c: Verifying Checksum
+4a36abed6d2c: Download complete
+81f4114b2783: Download complete
+03473fe4df18: Download complete
+34aa56be3da2: Verifying Checksum
+34aa56be3da2: Download complete
+5a76c66c06d3: Verifying Checksum
+5a76c66c06d3: Download complete
+b5c95ec7daeb: Verifying Checksum
+b5c95ec7daeb: Download complete
+9976fb94b77f: Verifying Checksum
+9976fb94b77f: Download complete
+2865df1e2f4e: Pull complete
+e4dc59f1a76f: Pull complete
+3206340d6393: Pull complete
+198190350e2d: Pull complete
+cc56319f86c3: Verifying Checksum
+cc56319f86c3: Download complete
+4ef6e8575efc: Pull complete
+cc56319f86c3: Pull complete
+4be8c185f1b8: Pull complete
+10aef54e5f26: Pull complete
+cb6294f96400: Pull complete
+9bfd42660423: Pull complete
+c17ebcd02feb: Pull complete
+8005f0d36d37: Pull complete
+9976fb94b77f: Pull complete
+ce06ac3b0aaa: Pull complete
+c1615e33428c: Pull complete
+4a36abed6d2c: Pull complete
+81f4114b2783: Pull complete
+03473fe4df18: Pull complete
+34aa56be3da2: Pull complete
+5a76c66c06d3: Pull complete
+b5c95ec7daeb: Pull complete
+Digest: sha256:61c2960e54e4d50b8ea2329efc893450c7504b2ed6da6df1a2b1004acbe8da63
+Status: Downloaded newer image for airuhead01:5000/ubuntu16.04-cuda10.1-cudnn7-devel-gl-py3.6-torch1.4-fixuid:latest
+unknown shorthand flag: 'I' in -It
+See 'docker run --help'.

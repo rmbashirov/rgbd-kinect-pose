@@ -1,0 +1,6 @@
+# @package _global_
+optimizer:
+    predictor:
+        cls: torch.optim.Adam
+        args:
+            lr: 0.0005

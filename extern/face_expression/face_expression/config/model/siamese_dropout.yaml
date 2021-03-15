@@ -1,0 +1,26 @@
+# @package _global_
+model:
+    predictor:
+        name: "SiameseModelDropout"
+
+        cls: face_expression.model.SiameseModelDropout
+        args:
+            n_keypoints: 468
+            beta_size: 10
+
+            emb_size: 32
+            hid_size: 32
+
+            expression_size: 10
+            jaw_pose_size: 3
+
+            dropout_p: 0.5
+
+    smplx_model:
+        name: "SMPLXModel"
+        
+        cls: face_expression.smplx_model.ExpBodyModel
+        args:
+            bm_path: "${log.project_dir}/misc/body_models/smplx/SMPLX_NEUTRAL.npz"
+            is_hand_pca: true
+            num_pca_comps: 6

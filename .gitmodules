@@ -1,0 +1,12 @@
+[submodule "extern/minimal_pytorch_rasterizer"]
+	path = extern/minimal_pytorch_rasterizer
+	url = https://github.com/rmbashirov/minimal_pytorch_rasterizer.git
+[submodule "extern/pyk4a"]
+	path = extern/pyk4a
+	url = https://github.com/rmbashirov/pyk4a.git
+[submodule "extern/minimal_hand"]
+	path = extern/minimal_hand
+	url = https://github.com/rmbashirov/minimal-hand.git
+[submodule "extern/multiprocessing_pipeline"]
+	path = extern/multiprocessing_pipeline
+	url = https://github.com/rmbashirov/multiprocessing_pipeline.git

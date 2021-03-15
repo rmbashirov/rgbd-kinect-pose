@@ -1,0 +1,9 @@
+# @package _global_
+renderer:
+    cls: face_expression.utils.vis.Renderer
+    args:
+        canvas_shape: ${data.train.dataset.args.image_shape}
+        bg_color: [0, 0, 0, 0]
+        world_angles: [-3.14159265359, 0.0, 0.0]
+        ambient_light: [0.3, 0.3, 0.3]
+        directional_light_intensity: 2.0

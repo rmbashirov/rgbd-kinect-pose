@@ -1,0 +1,27 @@
+# @package _global_
+criterion:
+    expression:
+        weight: 1.0
+
+        cls: face_expression.criterion.MAECriterion
+        args:
+
+    jaw_pose:
+        weight: 1.0
+        
+        cls: face_expression.criterion.JawPoseCriterion
+        args:
+            criterion_type: 'MAE'
+            rotmat_representation: true
+
+    keypoint_2d_l2:
+        weight: 1.0
+
+        cls: face_expression.criterion.KeypointL2Criterion
+        args:
+
+    keypoint_3d_l2:
+        weight: 1.0
+
+        cls: face_expression.criterion.KeypointL2Criterion
+        args:

@@ -1,0 +1,19 @@
+# @package _global_
+log:
+    experiment_name: "debug"
+    project_name: "face_expression"
+
+    root_dir: "/Vol1/dbstore/datasets/k.iskakov/projects"
+    project_dir: "${log.root_dir}/${log.project_name}"
+    
+    log_freq_checkpoint_epoch: 1
+    log_freq_image_batch:
+        train: 200
+        val: 200
+
+    log_n_samples_triple: 8
+    render_smplx: true
+    
+    logger:
+        cls: face_expression.utils.logger.WandbLogger
+        args:

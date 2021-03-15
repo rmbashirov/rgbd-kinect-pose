@@ -1,0 +1,3 @@
+# @package _global_
+runner:
+    cls: face_expression.runner.Runner

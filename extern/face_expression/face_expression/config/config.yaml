@@ -1,0 +1,19 @@
+# @package _global_
+defaults:
+    - log: log
+    - data: voxceleb2_mediapipe
+    - preprocessing: preprocessing
+    - model: siamese_mediapipe_2d
+    - runner: runner
+    - criterion: criterion
+    - optimizer: optimizer
+    - renderer: renderer
+
+loop:
+    n_epochs: 999999
+    
+random_seed: 0
+device: "cuda:0"
+
+# distributed
+local_rank: 0

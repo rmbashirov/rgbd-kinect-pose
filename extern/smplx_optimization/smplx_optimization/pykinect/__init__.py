@@ -1,0 +1,5 @@
+import smplx_optimization.pykinect.index_mapping
+import smplx_optimization.pykinect.mymath
+import smplx_optimization.pykinect.patched_smplx_loader
+import smplx_optimization.pykinect.pose_init
+import smplx_optimization.pykinect.smplx_model

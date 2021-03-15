@@ -1,0 +1,28 @@
+# @package _global_
+data:
+    test:
+        n_iters_per_epoch: -1
+
+        dataset:
+            cls: face_expression.dataset.VoxCeleb2MediapipeDataset
+            args:
+                image_root: "/Vol0/user/r.bashirov/workdir/git/data/smplx_kinect/test_capture/offline_processor2"
+            
+                h5_path: "/Vol1/dbstore/datasets/k.iskakov/data/AzurePeopleTest/meta/AzurePeopleTest.test.h5"
+                scheme_path: "/Vol1/dbstore/datasets/k.iskakov/data/AzurePeopleTest/meta/AzurePeopleTest_scheme.test.pkl"
+
+                return_keypoints_3d: ${model.predictor.args.use_keypoints_3d}
+
+                return_images: True
+                bbox_scale: 2.0
+                image_shape: [256, 256]
+
+                sample_range: null
+        
+        dataloader:
+            args:
+                batch_size: 256
+
+                shuffle: False
+                drop_last: False
+                num_workers: 8
