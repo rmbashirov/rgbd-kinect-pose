@@ -21,3 +21,4 @@ omegaconf==2.0.6
 smplx==0.1.26
 tensorboardX==2.1
 chumpy==0.70
+wandb==0.9.7
