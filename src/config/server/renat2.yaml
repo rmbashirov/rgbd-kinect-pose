@@ -1,4 +1,4 @@
-data_dirpath: "/storage/wacv_publish/demo_data_publish"
+data_dirpath: "/storage/wacv_publish/demo_data"
 output_dirpath: "/home/vakhitov/Desktop/kavatar_test"
 
 
@@ -18,10 +18,10 @@ aggregate:  # aggregate results from body, hand and face blocks
     modify_wrist_th: 0.05
     modify_wrist_N: 10
     filter_wrist: True  # wrist here is a body joint to which hand is attached
-    filter_hand: True  # filter each of 15 joints for each hand
-    filter_global_trans: True  # global translation for body
-    filter_global_rot: True  # global rotation for body
-    filter_body_pose: True  # filter 21 joints of body
+    filter_hand: True  # filter 15 joints for each hand
+    filter_global_trans: False  # global translation for body
+    filter_global_rot: False  # global rotation for body
+    filter_body_pose: False  # filter 21 joints of body
     filter_jaw_pose: True  # filter single jaw joint
     filter_face_expression: True  # filter 10 face expression parameters
     fix_global: False
@@ -52,8 +52,12 @@ face_pose:
 
 body_pose:
   log_level: 1
-  model_path: "smplx_kinect/04"
-  checkpoint: 110000
+#  model_path: "smplx_kinect/04"
+#  checkpoint: 110000
+#  model_path: "smplx_kinect/03"
+#  checkpoint: 88000
+  model_path: "smplx_kinect/05"
+  checkpoint: 160000
   gender: "male"  # gender and shape of a person that is in front of the camera
   person_shape_path: "shapefit/renat"
   device: "cuda:0"

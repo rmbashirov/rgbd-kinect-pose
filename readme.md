@@ -32,8 +32,8 @@ Combined system runs at 30 fps on a 2080ti GPU and 8 core @ 4GHz CPU.
 
 # What else
 Apart from our main body pose estimation contribution you can find this repository useful for:
-- [pyk4a](https://github.com/rmbashirov/pyk4a) python package: real-time streaming from Azure Kinect camera, this package also works in our provided docker environment
 - [minimal_pytorch_rasterizer](https://github.com/rmbashirov/minimal_pytorch_rasterizer) python package: CUDA non-differentiable mesh rasterization library for pytorch tensors with python bindings
+- [pyk4a](https://github.com/rmbashirov/pyk4a) python package: real-time streaming from Azure Kinect camera, this package also works in our provided docker environment
 - [multiprocessing_pipeline](https://github.com/rmbashirov/multiprocessing_pipeline) python package: set-up pipeline graph of python blocks running in parallel, see usage in [server.py](./src/server.py)
   
 
