@@ -24,6 +24,9 @@ Combined system runs at 30 fps on a 2080ti GPU and 8 core @ 4GHz CPU.
 
 ### Build & Run
 
+- Clone repo:
+  - `git clone https://github.sec.samsung.net/a-vakhitov/kavatar_realtime`
+  - `git submodule update --force --init --remote`
 - Install `docker` and `nvidia-docker`, set `nvidia` your default runtime for docker, your nvidia driver should support cuda 10.2, we do not support Windows or Mac.
 - Build docker image: [run](./docker) 2 cmds
 - Set `data_dirpath` and `output_dirpath` variables in [config file](./src/config/server/renat.yaml):
