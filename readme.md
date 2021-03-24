@@ -26,8 +26,15 @@ Combined system runs at 30 fps on a 2080ti GPU and 8 core @ 4GHz CPU.
 
 - Install `docker` and `nvidia-docker`, set `nvidia` your default runtime for docker, your nvidia driver should support cuda 10.2, we do not support Windows or Mac.
 - Build docker image: [run](./docker) 2 cmds
+- Set `data_dirpath` and `output_dirpath` variables in [config file](./src/config/server/renat.yaml):
+  - `data_dirpath` is a path to `/your/unpacked/dir`
+  - `output_dirpath` is used to check timings or to store result images
+  - ensure these paths are visible inside docker container, set `VOLUMES` variable [here](https://github.com/rmbashirov/rgbd-kinect-pose/blob/b03818727b5101d572ebbc778d99d851bba2a40d/docker/run_local.sh#L5)
 - Attach your Azure Kinect camera
-- Run demo: in `src` dir run `./run_server.sh`, the latter will run docker image and will use [this](./src/config/server/renat.yaml) config (in config you also need to set `data_dirpath` variable to `/your/unpacked/dir`) where shape of the person is loaded from an external file: in our work we did not focus on person's shape estimation
+- [Optional] You can check your Azure Kinect camera is working inside Docker container:
+  - Enter Docker container: `./run_local.sh` from `docker` dir
+  - Then run `python -m pyk4a.viewer --vis_color --no_bt --no_depth` inside docker container
+- Run demo: in `src` dir run `./run_server.sh`, the latter will enter docker container and will use [config file](./src/config/server/renat.yaml) where shape of the person is loaded from an external file: in our work we did not focus on person's shape estimation
 
 
 # What else

@@ -130,6 +130,15 @@ class AggregateProcessor(Processor):
         self.visualize_device = None
         self.prev_time = time.time()
 
+        self.dump_config = self.processor_config.get('dump', None)
+        if self.dump_config is not None and self.dump_config['enable']:
+            self.dump_dp = osp.join(self.output_dirpath, self.dump_config['output_path'])
+            os.makedirs(self.dump_dp, exist_ok=True)
+            self.dump_fp = osp.join(self.dump_dp, 'poses.pickle')
+            self.dump_data = []
+        else:
+            self.dump_data = None
+
         self.index = -1
         self.output_count = 0
 
@@ -191,6 +200,9 @@ class AggregateProcessor(Processor):
                 cv2.imshow('a', vis)
                 cv2.waitKey(1)
 
+        if self.dump_data is not None:
+            self.dump_data.append(deepcopy(x))
+
         cur = time.time()
 
         if self.log_level >= 2:
@@ -203,4 +215,7 @@ class AggregateProcessor(Processor):
         self.output_count += 1
 
     def destructor(self):
-        pass
+        if hasattr(self, 'dump_fp') and self.dump_fp is not None:
+            with open(self.dump_fp, 'wb') as f:
+                pickle.dump(self.dump_data, f)
+            print('poses dump done')
