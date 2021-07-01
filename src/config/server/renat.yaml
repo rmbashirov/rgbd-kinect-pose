@@ -1,5 +1,5 @@
-data_dirpath: "/storage/wacv_publish/demo_data_publish"
-output_dirpath: "/home/vakhitov/Desktop/kavatar_test"
+data_dirpath: "/home/renat/data/rgbd-kinect-pose"
+output_dirpath: "/home/renat/Desktop/kavatar_test"
 
 
 aggregate:  # aggregate results from body, hand and face blocks

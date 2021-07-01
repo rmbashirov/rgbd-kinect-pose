@@ -4,7 +4,7 @@ This repository is a real-time demo for our [**paper**](https://arxiv.org/abs/21
  
 The output of our module is in [SMPL-X](https://smpl-x.is.tue.mpg.de) parametric body mesh model:
 - RNN estimates body pose from joints detected by [Azure Kinect Body Tracking API](https://docs.microsoft.com/en-us/azure/kinect-dk/body-joints)
-- For hand and face pose (face expression and jaw pose) we crop from rgb image: 
+- For face (expression and jaw) and hand pose we crop from rgb image: 
   - for hand model we use [minimal-hand](https://github.com/CalciferZh/minimal-hand)
   - our face NN takes [media-pipe](https://google.github.io/mediapipe/solutions/face_mesh.html) keypoints as input
 
@@ -14,6 +14,29 @@ Combined system runs at 30 fps on a 2080ti GPU and 8 core @ 4GHz CPU.
 
 # How to use
 
+### Build
+- Prereqs: your nvidia driver should support cuda 10.2, Windows or Mac are not supported.
+- Clone repo:
+  - `git clone https://github.com/rmbashirov/rgbd-kinect-pose.git`
+  - `cd rgbd-kinect-pose`
+  - `git submodule update --force --init --remote`
+- Docker setup:
+  - [Install docker engine](https://docs.docker.com/engine/install/ubuntu/):
+  - [Install nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
+  - [Set](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html#daemon-configuration-file) nvidia your default runtime for docker
+  - Make docker run without sudo: create docker group and add current user to it: 
+    ```
+    sudo groupadd docker
+    sudo usermod -aG docker $USER
+    ```
+  - **reboot**
+- Build docker image: [run](./docker) 2 cmds
+- Attach your Azure Kinect camera
+- Check your Azure Kinect camera is working inside Docker container:
+  - Enter Docker container: `./run_local.sh` from `docker` dir
+  - Then run `python -m pyk4a.viewer --vis_color --no_bt --no_depth` inside docker container
+
+
 ### Download data
 
 - Download [our](https://drive.google.com/file/d/1Y6HzwJS9N9qWTNNYQdtNqf1FZKoZF-tg/view?usp=sharing) data archive `smplx_kinect_demo_data.tar.gz`
@@ -21,23 +44,13 @@ Combined system runs at 30 fps on a 2080ti GPU and 8 core @ 4GHz CPU.
 - Download models for hand, see link in "Download models from here" line in our [fork](https://github.com/rmbashirov/minimal-hand), put to `/your/unpacked/dir/minimal_hand/model`    
 - To download SMPL-X parametric body model go to [this](https://smpl-x.is.tue.mpg.de/) project website, register, go to the downloads section, download SMPL-X v1.1 model, put to `/your/unpacked/dir/pykinect/body_models/smplx`
 - `/your/unpacked/dir` should look like [this](./readme/data_structure.txt)
-
-### Build & Run
-
-- Clone repo:
-  - `git clone https://github.com/rmbashirov/rgbd-kinect-pose.git`
-  - `cd rgbd-kinect-pose`
-  - `git submodule update --force --init --remote`
-- Install `docker` and `nvidia-docker`, set `nvidia` your default runtime for docker, your nvidia driver should support cuda 10.2, we do not support Windows or Mac.
-- Build docker image: [run](./docker) 2 cmds
 - Set `data_dirpath` and `output_dirpath` variables in [config file](./src/config/server/renat.yaml):
   - `data_dirpath` is a path to `/your/unpacked/dir`
   - `output_dirpath` is used to check timings or to store result images
   - ensure these paths are visible inside docker container, set `VOLUMES` variable [here](https://github.com/rmbashirov/rgbd-kinect-pose/blob/b03818727b5101d572ebbc778d99d851bba2a40d/docker/run_local.sh#L5)
-- Attach your Azure Kinect camera
-- [Optional] You can check your Azure Kinect camera is working inside Docker container:
-  - Enter Docker container: `./run_local.sh` from `docker` dir
-  - Then run `python -m pyk4a.viewer --vis_color --no_bt --no_depth` inside docker container
+
+### Run
+
 - Run demo: in `src` dir run `./run_server.sh`, the latter will enter docker container and will use [config file](./src/config/server/renat.yaml) where shape of the person is loaded from an external file: in our work we did not focus on person's shape estimation
 
 
