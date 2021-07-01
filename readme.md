@@ -21,7 +21,7 @@ Combined system runs at 30 fps on a 2080ti GPU and 8 core @ 4GHz CPU.
   - `cd rgbd-kinect-pose`
   - `git submodule update --force --init --remote`
 - Docker setup:
-  - [Install docker engine](https://docs.docker.com/engine/install/ubuntu/):
+  - [Install docker engine](https://docs.docker.com/engine/install/ubuntu/)
   - [Install nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
   - [Set](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html#daemon-configuration-file) nvidia your default runtime for docker
   - Make docker run without sudo: create docker group and add current user to it: 
