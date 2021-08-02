@@ -30,7 +30,9 @@ Combined system runs at 30 fps on a 2080ti GPU and 8 core @ 4GHz CPU.
     sudo usermod -aG docker $USER
     ```
   - **reboot**
-- Build docker image: [run](./docker) 2 cmds
+- Create docker image: 
+  - Build on your own: [run](./docker) 2 cmds
+  - Or download docker image from [baidu](https://github.com/rmbashirov/rgbd-kinect-pose/issues/5#issuecomment-890992404)
 - Attach your Azure Kinect camera
 - Check your Azure Kinect camera is working inside Docker container:
   - Enter Docker container: `./run_local.sh` from `docker` dir
